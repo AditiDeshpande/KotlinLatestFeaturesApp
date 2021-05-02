@@ -17,7 +17,7 @@ interface ApiService {
     request
     */
     @GET("posts")
-    suspend fun getPost(): List<Post>{
+    suspend fun getPost(): List<Post>
         /*
         List<Post> return type it is list of Post Model class
         which we have created before
@@ -27,5 +27,5 @@ interface ApiService {
         kotlin coroutines
          */
 
-    }
+
 }
