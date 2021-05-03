@@ -18,12 +18,13 @@ previously we used to write ApplicationComponent
 object AppModule {
 
     @Provides
-    @Singleton
-    fun providesUrl() = "https://jsonplaceholder.typicode.com/posts/"
+    fun providesUrl() = "https://jsonplaceholder.typicode.com/"
 
     /*
     This ApiService is the class which I myself I have written
      */
+    @Provides
+    @Singleton
     fun providesApiService(url:String) : ApiService =
             Retrofit.Builder().baseUrl(url)
                     .addConverterFactory(GsonConverterFactory.create())
